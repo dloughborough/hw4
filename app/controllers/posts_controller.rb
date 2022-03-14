@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     else
       flash[:notice] = "Login first."
     end
-    redirect_to "/places/"
+    redirect_to "/places/#{@post.place.id}"
   end
 
 end
