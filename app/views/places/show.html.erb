@@ -1,3 +1,5 @@
+<% if @current_user %>
+
 <h1><%= @place.name %></h1>
 
 
@@ -25,3 +27,10 @@
 <div class="col-sm-3">
         <a href="/places" class="btn btn-success">Back to All Places</a>
       </div>
+
+<% else %>
+<div class="col-sm-3">
+        <a href="/sessions/new/" class="btn btn-success">Login</a>
+      </div>
+
+<% end %>

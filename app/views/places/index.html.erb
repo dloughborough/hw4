@@ -1,5 +1,5 @@
 <h1>Places</h1>
-
+<% if @current_user %>
 <ul>
   <% for place in @places %>
     <li><a href="/places/<%= place.id %>"><%= place.name %></a></li>
@@ -9,3 +9,10 @@
 <div class="col-sm-3">
         <a href="/places/new/" class="btn btn-success">New Place</a>
       </div>
+
+<% else %>
+<div class="col-sm-3">
+        <a href="/sessions/new/" class="btn btn-success">Login</a>
+      </div>
+
+<% end %>
